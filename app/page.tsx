@@ -71,14 +71,14 @@ export default function TodoApp() {
       <Tabs defaultValue="today" className="w-full">
         <TabsList className="w-full justify-start mb-6 bg-background">
           <TabsTrigger value="messages" className="text-muted-foreground">Messages</TabsTrigger>
-          <TabsTrigger value="today" className="font-semibold">Today's Task</TabsTrigger>
+          <TabsTrigger value="today" className="font-semibold">{`Today's Task`}</TabsTrigger>
           <TabsTrigger value="activity" className="text-muted-foreground">Last Activity</TabsTrigger>
         </TabsList>
 
         <TabsContent value="today" className="space-y-6 bg-[#f9f9f9] p-4">
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-2xl font-bold">Today's Task</h1>
+              <h1 className="text-2xl font-bold">{`Today's Task`}</h1>
               <p className="text-muted-foreground">{format(new Date(), 'EEEE, d MMMM')}</p>
             </div>
             <Button className="bg-blue-100 hover:bg-blue-200 text-blue-600" onClick={() => setIsNewTaskFormOpen(true)}>
